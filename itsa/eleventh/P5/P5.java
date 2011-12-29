@@ -1,5 +1,6 @@
+/* Problem 5. 有多少個零 */
+
 import static java.lang.System.out;
-import java.util.Vector;
 import java.io.*;
 
 class Formatter {
