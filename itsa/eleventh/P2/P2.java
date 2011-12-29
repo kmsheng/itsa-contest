@@ -43,7 +43,7 @@ class MyStringFormatter {
 		for (int i = 0; i < strArray.length; i++) {
 			intArray[i] = Integer.parseInt(strArray[i]);
 		}
-		
+
 		return intArray;
 	}
 }
@@ -106,7 +106,7 @@ class Mice {
 		if ((currentY + 1) <= (squareLength - 1)) {
 			paths.add(new int[] {currentX, currentY + 1});
 		}
-		
+
 		// 下
 		if ((currentX + 1) <= (squareLength - 1)) {
 			paths.add(new int[] {currentX + 1, currentY});
