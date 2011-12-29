@@ -148,10 +148,6 @@ class MyPrinter {
 		}
 	}
 
-	public void printDistance(int distance) {
-		out.println(distance + "\n");
-	}
-
 	public void printStatus(int currentX, int currentY, Vector<Integer> record, int[][] square, Vector<int[]> paths) {
 		out.println("當前的點: " + square[currentX][currentY]);
 		out.println("踩過的點:");
@@ -171,6 +167,7 @@ public class P2 {
 		MyPrinter printer = new MyPrinter();
 		Mice mice;
 		String str;
+		String output;
 
 		while ((str = br.readLine()) != null) {
 			int count = Integer.parseInt(str);
@@ -180,7 +177,13 @@ public class P2 {
 				int[][] square = reader.getSquare(side);
 
 				mice = new Mice();
-				printer.printDistance(mice.getLongestDistance(square));
+				output = mice.getLongestDistance(square) + "";
+
+				if (i != count - 1) {
+					output += "\n";
+				}
+
+				out.println(output);
 			}
 		}
 	}
